@@ -5,10 +5,21 @@
 }
 
 :root {
---white: #FFFFFF;
---green: #729996;
---light-green: #EAF4F5;
---grey: #F4F4F4;
+    --text-color: #111111;
+    --white: #FFFFFF;
+    --bg-color: #FFFFFF;
+    --green: #729996;
+    --light-green: #EAF4F5;
+    --bg-primary: #FEFFFE;
+}
+
+[data-theme="dark"] {
+    --text-color: #FFFFFF;
+    --white: #FFFFFF;
+    --bg-color: #1c1d21;
+    --green: #729996;
+    --light-green: #EAF4F5;
+    --bg-primary: #010101;
 }
 
 html {
@@ -16,12 +27,13 @@ html {
 }
 
 body {
-    background: var(--grey);
+    background: var(--bg-primary);
     font-family: Helvetica;
     font-size: 1.6rem;
 }
 
-header, main {
+header,
+main {
     width: 90%;
     margin: 4% auto;
 }
@@ -29,6 +41,7 @@ header, main {
 .header-title {
     text-align: center;
     font-weight: 300;
+    color: var(--text-color);
 }
 
 .header-subtitle {
@@ -39,11 +52,83 @@ header, main {
     margin: 3rem 0;
 }
 
-.card   {
+/* Toggle Button */
+.toggle {
+    margin: 2rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--green);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--green);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Card for Projects */
+
+.card {
     width: 100%;
     height: auto;
     border-radius: .5rem;
-    background: var(--white);
+    background: var(--bg-color);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
@@ -67,9 +152,11 @@ header, main {
     border-top-right-radius: .5rem;
 }
 
-.card-title, .card-actions {
+.card-title,
+.card-actions {
     margin: 1.6rem;
     font-weight: bold;
+    color: var(--text-color)
 }
 
 
@@ -84,15 +171,15 @@ header, main {
     display: inline-flex;
     width: 30px;
     height: 30px;
-   justify-content: center;
-   align-items: center;
-   margin-bottom: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.6rem;
 }
 
 .card-actions a:nth-child(2) {
     margin-left: 1rem;
     background: var(--light-green);
-    color: #000000;
+    color: #1c1d21;
 }
 
 .card-actions a:hover {
@@ -111,7 +198,7 @@ header, main {
     grid-gap: 4rem;
 }
 
-.project-content > div {
+.project-content>div {
     margin: 1rem 0;
 }
 
@@ -119,14 +206,16 @@ footer {
     margin: 5rem 0;
 }
 
-footer .footer-bar{
+footer .footer-bar {
     position: fixed;
     bottom: 0;
-    background: #333;
+    background: var(--bg-color);
     width: 100%;
     padding: 1rem;
     text-align: center;
-    color: var(--white);
+    box-shadow: inset 0 -4px 6px -1px rgba(0, 0, 0, 0.1), inset 0 4px 4px -1px rgba(0, 0, 0, 0.06);
+    color: var(--text-color);
+
 }
 
 .footer-bar a {
