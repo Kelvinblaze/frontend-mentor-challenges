@@ -66,7 +66,9 @@ projects.forEach((project) => {
        <img src="${project.imageLink}" alt="${project.name}">
    </div>
    <div class="card-title">
+   <a href="${project.liveLink}" target="_blank">
        ${project.id}. ${project.name}
+       </a>
    </div>
    <div class="card-actions">
        <a href="${project.liveLink}">

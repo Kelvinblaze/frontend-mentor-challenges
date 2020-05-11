@@ -159,6 +159,12 @@ input:checked+.slider:before {
     color: var(--text-color)
 }
 
+.card-title a {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 .card-actions a {
     text-decoration: none;
