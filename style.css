@@ -8,7 +8,7 @@
 --white: #FFFFFF;
 --green: #729996;
 --light-green: #EAF4F5;
---grey: #f3f8f6;
+--grey: #F4F4F4;
 }
 
 html {
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    background: var(--white);
+    background: var(--grey);
     font-family: Helvetica;
     font-size: 1.6rem;
 }
