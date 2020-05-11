@@ -14,12 +14,12 @@
 }
 
 [data-theme="dark"] {
-    --text-color: #FFFFFF;
+    --text-color: rgba(255, 255, 255, 0.87);
     --white: #FFFFFF;
-    --bg-color: #1c1d21;
+    --bg-color: #1E1E1E;
     --green: #729996;
     --light-green: #EAF4F5;
-    --bg-primary: #010101;
+    --bg-primary: #121212;
 }
 
 html {
