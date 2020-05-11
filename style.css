@@ -114,3 +114,21 @@ header, main {
 .project-content > div {
     margin: 1rem 0;
 }
+
+footer {
+    margin: 5rem 0;
+}
+
+footer .footer-bar{
+    position: fixed;
+    bottom: 0;
+    background: #333;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.footer-bar a {
+    color: var(--green);
+}
