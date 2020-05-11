@@ -95,6 +95,11 @@ header, main {
     color: #000000;
 }
 
+.card-actions a:hover {
+    transition: ease-in 0.2s;
+    transform: scale(1.2);
+}
+
 .card-actions a span {
     text-align: center;
     font-size: 1.6rem;
