@@ -50,7 +50,7 @@ let projects = [
   },
   {
     id: 7,
-    name: "Huddle landing page with alternating feature blocks",
+    name: "Huddle landing page",
     imageLink: "huddle/design/desktop-preview.jpg",
     liveLink: "/huddle",
     github: "https://github.com/Kelvinblaze/frontend-mentor-challenges/huddle",
